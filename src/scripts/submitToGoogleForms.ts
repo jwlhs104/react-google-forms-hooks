@@ -8,6 +8,7 @@ import {
 export const GOOGLE_FORMS_URL = 'https://docs.google.com/forms/d'
 
 export const formatQuestionName = (id: string) => {
+  if (id === "emailAddress") return id
   if (id.includes(OTHER_OPTION_RESPONSE)) {
     return `entry.${id.replace(
       `-${OTHER_OPTION}-${OTHER_OPTION_RESPONSE}`,
