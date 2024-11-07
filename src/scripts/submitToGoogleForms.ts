@@ -39,13 +39,14 @@ export const submitToGoogleForms = async (
   const fetchedResult = await fetch(
     `${GOOGLE_FORMS_URL}/${
       form.action
-    }/formResponse?submit=Submit&${urlParams.toString()}`,
+    }/formResponse`,
     {
-      method: 'GET',
+      method: 'POST',
       mode: 'no-cors',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
-      }
+      },
+      body: urlParams.toString(),
     }
   )
 
