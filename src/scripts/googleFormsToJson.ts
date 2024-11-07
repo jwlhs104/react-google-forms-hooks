@@ -135,6 +135,12 @@ const parseField = (rawField: Array<any>): Field => {
 
   field.label = rawField[1]
   field.description = rawField[2]
+  if (rawField[11]) {
+    field.description = rawField[11][1]
+  }
+  if (rawField[12]) {
+    field.description = rawField[12][1]
+  }
 
   const fieldId = rawField[3]
   field.type = parseFieldType(rawField, fieldId)
