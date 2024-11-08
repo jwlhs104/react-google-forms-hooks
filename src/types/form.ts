@@ -31,6 +31,10 @@ export interface DropdownField extends BaseField {
   options: Array<Option>
 }
 
+export interface SectionField extends BaseField {
+  type: 'SECTION'
+}
+
 interface Legend {
   labelFirst: string
   labelLast: string
@@ -64,6 +68,7 @@ export type Field =
   | DropdownField
   | GridField
   | LinearField
+  | SectionField
 
 export type FieldTypes = Field['type']
 
