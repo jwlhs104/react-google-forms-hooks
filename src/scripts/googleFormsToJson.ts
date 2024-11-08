@@ -194,6 +194,8 @@ const parseField = (rawField: Array<any>): Field => {
       field.required = toBool(rawField[4][0][2])
       break
     }
+    default:
+      break
   }
 
   return field
