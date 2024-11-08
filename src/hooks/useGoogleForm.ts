@@ -13,8 +13,8 @@ const resolveField = (id: string, form: GoogleForm) => {
   return field
 }
 
-export const useGoogleForm = ({ form }: { form: GoogleForm }) => {
-  const methods = useForm() as UseGoogleFormReturn
+export const useGoogleForm = ({ form, options }: { form: GoogleForm }) => {
+  const methods = useForm(options) as UseGoogleFormReturn
 
   methods.getField = (id: string) => resolveField(id, form)
 
