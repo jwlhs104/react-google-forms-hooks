@@ -97,6 +97,9 @@ const parseFieldType = (rawField: Array<object>, fieldId: number) => {
       return 'RADIO_GRID'
     }
   }
+  if (fieldId === 8) {
+    return 'SECTION'  
+  }
   if (fieldId === 9) {
     return 'DATE'
   }
