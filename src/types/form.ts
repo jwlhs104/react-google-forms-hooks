@@ -9,6 +9,7 @@ export interface CustomizableOption extends Option {
 export interface BaseField {
   id: string
   label: string
+  htmlLabel: string
   description?: string
   required: boolean
 }

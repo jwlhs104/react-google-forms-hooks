@@ -139,7 +139,7 @@ const parseField = (rawField: Array<any>): Field => {
   field.label = rawField[1]
   field.description = rawField[2]
   if (rawField[11]) {
-    field.label = rawField[11][1]
+    field.htmlLabel = rawField[11][1]
   }
   if (rawField[12]) {
     field.description = rawField[12][1]
